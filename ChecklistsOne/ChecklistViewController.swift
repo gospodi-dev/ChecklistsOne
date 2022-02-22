@@ -56,6 +56,7 @@ class ChecklistViewController: UITableViewController {
         } else if indexPath.row == 4 {
           label.text = row4text
         }
+        configureCheckmark(for: cell, at: indexPath)
         return cell
     }
     // MARK: - Table View Delegate
@@ -90,6 +91,32 @@ class ChecklistViewController: UITableViewController {
        }
       tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func configureCheckmark(
+      for cell: UITableViewCell,
+      at indexPath: IndexPath
+    ) {
+      var isChecked = false
+
+      if indexPath.row == 0 {
+        isChecked = row0checked
+      } else if indexPath.row == 1 {
+        isChecked = row1checked
+      } else if indexPath.row == 2 {
+        isChecked = row2checked
+      } else if indexPath.row == 3 {
+        isChecked = row3checked
+      } else if indexPath.row == 4 {
+        isChecked = row4checked
+      }
+
+      if isChecked {
+        cell.accessoryType = .checkmark
+      } else {
+        cell.accessoryType = .none
+      }
+    }
+
     
     
 }
