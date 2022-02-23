@@ -16,10 +16,10 @@ class ChecklistViewController: UITableViewController {
     
     
     var row0checked = false
-    var row1checked = false
-    var row2checked = false
+    var row1checked = true
+    var row2checked = true
     var row3checked = false
-    var row4checked = false
+    var row4checked = true
 
     
     override func viewDidLoad() {
