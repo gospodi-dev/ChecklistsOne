@@ -8,7 +8,7 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController {
-    var item = [ChecklistItem]()
+    var items = [ChecklistItem]()
     
     
     override func viewDidLoad() {
@@ -82,12 +82,11 @@ class ChecklistViewController: UITableViewController {
         for cell: UITableViewCell,
         at indexPath: IndexPath
     ) {
-        var isChecked = false
         
         let item = items[indexPath.row]
 
         
-        if isChecked {
+        if item.checked {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
