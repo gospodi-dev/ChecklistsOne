@@ -79,19 +79,24 @@ class ChecklistViewController: UITableViewController {
     
     
     func configureCheckmark(
-        for cell: UITableViewCell,
-        at indexPath: IndexPath
+      for cell: UITableViewCell,
+      with item: ChecklistItem
     ) {
-        
-        let item = items[indexPath.row]
-
-        
-        if item.checked {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+      if item.checked {
+        cell.accessoryType = .checkmark
+      } else {
+        cell.accessoryType = .none
+      }
     }
+
+    func configureText(
+      for cell: UITableViewCell,
+      with item: ChecklistItem
+    ) {
+      let label = cell.viewWithTag(1000) as! UILabel
+      label.text = item.text
+    }
+
     
     
     
