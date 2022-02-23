@@ -22,11 +22,24 @@ class ChecklistViewController: UITableViewController {
     var row3checked = false
     var row4checked = true
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Add the following lines
+        row0item.text = "Walk the dog"
+        
+        row1item.text = "Brush my teeth"
+        row1item.checked = true
+        
+        row2item.text = "Learn iOS development"
+        row2item.checked = true
+        
+        row3item.text = "Soccer practice"
+        
+        row4item.text = "Eat ice cream"
+        row4item.checked = true
     }
+    
     
     // MARK: - Table View Data Source
     override func tableView(
@@ -47,15 +60,15 @@ class ChecklistViewController: UITableViewController {
         let label = cell.viewWithTag(1000) as! UILabel
         
         if indexPath.row == 0 {
-          label.text = row0item.text
+            label.text = row0item.text
         } else if indexPath.row == 1 {
-          label.text = row1item.text
+            label.text = row1item.text
         } else if indexPath.row == 2 {
-          label.text = row2item.text
+            label.text = row2item.text
         } else if indexPath.row == 3 {
-          label.text = row3item.text
+            label.text = row3item.text
         } else if indexPath.row == 4 {
-          label.text = row4item.text
+            label.text = row4item.text
         }
         configureCheckmark(for: cell, at: indexPath)
         return cell
@@ -67,17 +80,17 @@ class ChecklistViewController: UITableViewController {
     ) {
         if let cell = tableView.cellForRow(at: indexPath) {
             if indexPath.row == 0 {
-              row0item.checked.toggle()
+                row0item.checked.toggle()
             } else if indexPath.row == 1 {
-              row1item.checked.toggle()
+                row1item.checked.toggle()
             } else if indexPath.row == 2 {
-              row2item.checked.toggle()
+                row2item.checked.toggle()
             } else if indexPath.row == 3 {
-              row3item.checked.toggle()
+                row3item.checked.toggle()
             } else if indexPath.row == 4 {
-              row4item.checked.toggle()
+                row4item.checked.toggle()
             }
-
+            
             configureCheckmark(for: cell, at: indexPath)
         }
         tableView.deselectRow(at: indexPath, animated: true)
@@ -91,15 +104,15 @@ class ChecklistViewController: UITableViewController {
         var isChecked = false
         
         if indexPath.row == 0 {
-          isChecked = row0item.checked
+            isChecked = row0item.checked
         } else if indexPath.row == 1 {
-          isChecked = row1item.checked
+            isChecked = row1item.checked
         } else if indexPath.row == 2 {
-          isChecked = row2item.checked
+            isChecked = row2item.checked
         } else if indexPath.row == 3 {
-          isChecked = row3item.checked
+            isChecked = row3item.checked
         } else if indexPath.row == 4 {
-          isChecked = row4item.checked
+            isChecked = row4item.checked
         }
         
         if isChecked {
