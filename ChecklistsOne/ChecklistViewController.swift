@@ -16,25 +16,25 @@ class ChecklistViewController: UITableViewController {
         
         // Replace previous code with the following
         let item1 = ChecklistItem()
-        item1.text = "Walk the dog"
+        item1.text = "Выгулять собаку"
         items.append(item1)
         
         let item2 = ChecklistItem()
-        item2.text = "Brush my teeth"
+        item2.text = "Почистить зубы"
         item2.checked = true
         items.append(item2)
         
         let item3 = ChecklistItem()
-        item3.text = "Learn iOS development"
+        item3.text = "Изучить iOS разработку"
         item3.checked = true
         items.append(item3)
         
         let item4 = ChecklistItem()
-        item4.text = "Soccer practice"
+        item4.text = "По практиковать игру в футбол"
         items.append(item4)
         
         let item5 = ChecklistItem()
-        item5.text = "Eat ice cream"
+        item5.text = "Съесть мороженное"
         items.append(item5)
     }
     
