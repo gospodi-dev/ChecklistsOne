@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checklist View Controller-->
+        <!--Checklists-->
         <scene sceneID="3yZ-fp-2P5">
             <objects>
                 <tableViewController id="kZp-99-5gl" customClass="ChecklistViewController" customModule="ChecklistsOne" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="Tff-ma-mjn">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tff-ma-mjn" id="DKE-C5-aTU">
-                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3X-2E-Wmk">
-                                            <rect key="frame" x="20" y="11" width="350" height="21"/>
+                                            <rect key="frame" x="20" y="10.999999999999998" width="350" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             <outlet property="delegate" destination="kZp-99-5gl" id="Lf3-mb-lYA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JSe-OM-5L0"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="JSe-OM-5L0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKG-BR-zEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
