@@ -14,4 +14,15 @@ class AddItemViewController: UITableViewController {
         navigationItem.largeTitleDisplayMode = .never
         
     }
+    
+    //MARK: - Actions
+    // MARK: - Actions
+    @IBAction func cancel() {
+      navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction func done() {
+      navigationController?.popViewController(animated: true)
+    }
+
 }
