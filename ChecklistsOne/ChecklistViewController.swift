@@ -98,6 +98,8 @@ class ChecklistViewController: UITableViewController {
     //MARK: - Actions
     @IBAction func addItem() {
         let newRowIndex = items.count
+        
+        let item = ChecklistItem()
     }
 }
 

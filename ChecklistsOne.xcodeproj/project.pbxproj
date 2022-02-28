@@ -61,11 +61,11 @@
 				CCC0E35C27C2C23200A739D8 /* AppDelegate.swift */,
 				CCC0E35E27C2C23200A739D8 /* SceneDelegate.swift */,
 				CCC0E36027C2C23200A739D8 /* ChecklistViewController.swift */,
+				CC75C1D727C69C2E00616FAF /* ChecklistItem.swift */,
 				CCC0E36227C2C23200A739D8 /* Main.storyboard */,
 				CCC0E36527C2C23200A739D8 /* Assets.xcassets */,
 				CCC0E36727C2C23200A739D8 /* LaunchScreen.storyboard */,
 				CCC0E36A27C2C23200A739D8 /* Info.plist */,
-				CC75C1D727C69C2E00616FAF /* ChecklistItem.swift */,
 			);
 			path = ChecklistsOne;
 			sourceTree = "<group>";
