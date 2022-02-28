@@ -104,7 +104,7 @@ class ChecklistViewController: UITableViewController {
         items.append(item)
         
         let indexPath = IndexPath(row: newRowIndex, section: 0)
-        
+        let indexPaths = [indexPath]
     }
 }
 
