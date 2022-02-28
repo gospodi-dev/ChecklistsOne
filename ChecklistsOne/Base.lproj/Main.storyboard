@@ -47,7 +47,6 @@
                     <navigationItem key="navigationItem" title="Checklists" id="JSe-OM-5L0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xfR-EP-yyg">
                             <connections>
-                                <action selector="addItem" destination="kZp-99-5gl" id="2nk-h2-s9g"/>
                                 <segue destination="FuD-0E-Bu9" kind="show" id="PTC-pm-chb"/>
                             </connections>
                         </barButtonItem>
@@ -80,7 +79,10 @@
                             <outlet property="delegate" destination="FuD-0E-Bu9" id="XIM-JN-N1t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nog-R5-quz"/>
+                    <navigationItem key="navigationItem" id="nog-R5-quz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TKV-OC-DFc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4O3-az-REm"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i65-kB-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
