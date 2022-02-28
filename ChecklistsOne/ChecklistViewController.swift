@@ -100,6 +100,11 @@ class ChecklistViewController: UITableViewController {
         let newRowIndex = items.count
         
         let item = ChecklistItem()
+        item.text = "Я новая строка!"
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        
     }
 }
 
