@@ -74,8 +74,6 @@ class ChecklistViewController: UITableViewController {
       }
       tableView.deselectRow(at: indexPath, animated: true)
     }
-
-    
     
     func configureCheckmark(
       for cell: UITableViewCell,
@@ -95,9 +93,6 @@ class ChecklistViewController: UITableViewController {
       let label = cell.viewWithTag(1000) as! UILabel
       label.text = item.text
     }
-
-    
-    
     
 }
 
