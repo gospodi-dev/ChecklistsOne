@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="Tff-ma-mjn">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tff-ma-mjn" id="DKE-C5-aTU">
-                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3X-2E-Wmk">
-                                            <rect key="frame" x="20" y="11.000000000000002" width="350" height="21.666666666666671"/>
+                                            <rect key="frame" x="20" y="11" width="350" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="1023.0769230769231" y="20.616113744075829"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Item-->
         <scene sceneID="JEa-VR-KTX">
             <objects>
                 <tableViewController id="FuD-0E-Bu9" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <outlet property="delegate" destination="FuD-0E-Bu9" id="XIM-JN-N1t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nog-R5-quz">
+                    <navigationItem key="navigationItem" title="Add Item" id="nog-R5-quz">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TKV-OC-DFc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="4O3-az-REm"/>
                     </navigationItem>
