@@ -109,9 +109,6 @@ class ChecklistViewController: UITableViewController {
       tableView.deleteRows(at: indexPaths, with: .automatic)
     }
 
-    
-    
-    
     //MARK: - Actions
     @IBAction func addItem() {
         let newRowIndex = items.count
