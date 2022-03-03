@@ -9,7 +9,7 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
     
-    @IBOutlet weak var TextField: UITextField!
+    @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +23,7 @@ class AddItemViewController: UITableViewController {
     }
     
     @IBAction func done() {
+        print("Contents of the text field: \(textField.text!)")
         navigationController?.popViewController(animated: true)
     }
     
@@ -34,5 +35,9 @@ class AddItemViewController: UITableViewController {
         return nil
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      textField.becomeFirstResponder()
+    }
+
 }
