@@ -37,7 +37,7 @@ class AddItemViewController: UITableViewController {
     ) -> IndexPath? {
         return nil
     }
-    
+    // чтобы клавиатура автоматически появлялась при открытии экрана
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       textField.becomeFirstResponder()
