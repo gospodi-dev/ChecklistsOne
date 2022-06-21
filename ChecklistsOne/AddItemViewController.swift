@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var textField: UITextField!
