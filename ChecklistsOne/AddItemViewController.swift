@@ -48,21 +48,26 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     // MARK: - Text Field Delegates
     // один из методов `UITextField` делегирования. Он вызывается каждый раз, когда пользователь изменяет текст, будь то нажатием на клавиатуру или с помощью cut/paste.
     func textField(
-      _ textField: UITextField,
-      shouldChangeCharactersIn range: NSRange,
-      replacementString string: String
+        _ textField: UITextField,
+        shouldChangeCharactersIn range: NSRange,
+        replacementString string: String
     ) -> Bool {
-      let oldText = textField.text!
-      let stringRange = Range(range, in: oldText)!
-      let newText = oldText.replacingCharacters(
-        in: stringRange,
-        with: string)
-      if newText.isEmpty {
+        let oldText = textField.text!
+        let stringRange = Range(range, in: oldText)!
+        let newText = oldText.replacingCharacters(
+            in: stringRange,
+            with: string)
+        if newText.isEmpty {
+            doneBarButton.isEnabled = false
+        } else {
+            doneBarButton.isEnabled = true
+        }
+        return true
+    }
+
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
         doneBarButton.isEnabled = false
-      } else {
-        doneBarButton.isEnabled = true
-      }
-      return true
+        return true
     }
 
 }
