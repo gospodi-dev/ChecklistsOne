@@ -95,16 +95,16 @@ class ChecklistViewController: UITableViewController {
       let label = cell.viewWithTag(1000) as! UILabel
       label.text = item.text
     }
-    
+    // добавим удаление строки методом Swipe-to-delete
     override func tableView(
       _ tableView: UITableView,
       commit editingStyle: UITableViewCell.EditingStyle,
       forRowAt indexPath: IndexPath
     ) {
-      // 1
+      
       items.remove(at: indexPath.row)
 
-      // 2
+      
       let indexPaths = [indexPath]
       tableView.deleteRows(at: indexPaths, with: .automatic)
     }
@@ -112,7 +112,7 @@ class ChecklistViewController: UITableViewController {
     //MARK: - Actions
     // подключим кнопку "Добавить" к действию
     @IBAction func addItem() {
-        let newRowIndex = items.count // индекс новой строки всегда равен количеству элементов, находящихся в данный момент в массиве  
+        let newRowIndex = items.count // индекс новой строки всегда равен количеству элементов, находящихся в данный момент в массиве
         // Новый код создает новый `ChecklistItem` объект и добавляет его в модель данных - `items` массив
         let item = ChecklistItem()
         item.text = "Я - новая строка!"
