@@ -14,7 +14,7 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = true // свойство, как следует из названия, позволяет создавать большие заголовки
         
         // Replace previous code with the following
         let item1 = ChecklistItem()
