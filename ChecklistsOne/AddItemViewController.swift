@@ -9,6 +9,7 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
     
+    
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,7 @@ class AddItemViewController: UITableViewController {
     }
     
     // MARK: - Actions
+    // добавляем действия при нажатии на кнопки
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
     }
@@ -28,6 +30,7 @@ class AddItemViewController: UITableViewController {
     }
     
     // MARK: - Table View Delegates
+    // убираем выделение строки
     override func tableView(
         _ tableView: UITableView,
         willSelectRowAt indexPath: IndexPath
