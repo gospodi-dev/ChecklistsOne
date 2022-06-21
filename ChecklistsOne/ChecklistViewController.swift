@@ -110,11 +110,12 @@ class ChecklistViewController: UITableViewController {
     }
 
     //MARK: - Actions
+    // подключим кнопку "Добавить" к действию
     @IBAction func addItem() {
-        let newRowIndex = items.count
-        
+        let newRowIndex = items.count // индекс новой строки всегда равен количеству элементов, находящихся в данный момент в массиве  
+        // Новый код создает новый `ChecklistItem` объект и добавляет его в модель данных - `items` массив
         let item = ChecklistItem()
-        item.text = "Я новая строка!"
+        item.text = "Я - новая строка!"
         items.append(item)
         
         let indexPath = IndexPath(row: newRowIndex, section: 0)
