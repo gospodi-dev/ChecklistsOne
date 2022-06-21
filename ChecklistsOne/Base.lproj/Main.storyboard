@@ -81,7 +81,6 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="FuD-0E-Bu9" eventType="editingDidEndOnExit" id="QvD-U4-Xkf"/>
-                                                        <outlet property="delegate" destination="FuD-0E-Bu9" id="cwF-wb-cDa"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -109,6 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="TextField" destination="0Ta-Iw-8eP" id="uBQ-7S-OdL"/>
+                        <outlet property="doneBarButton" destination="4O3-az-REm" id="iCR-qa-vgt"/>
                         <outlet property="textField" destination="0Ta-Iw-8eP" id="XnU-Jf-mNw"/>
                     </connections>
                 </tableViewController>
