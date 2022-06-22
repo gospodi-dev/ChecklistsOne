@@ -19,7 +19,13 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
       _ controller: AddItemViewController,
       didFinishAdding item: ChecklistItem
     ) {
-      navigationController?.popViewController(animated: true)
+      let newRowIndex = items.count
+      items.append(item)
+
+      let indexPath = IndexPath(row: newRowIndex, section: 0)
+      let indexPaths = [indexPath]
+      tableView.insertRows(at: indexPaths, with: .automatic)
+      navigationController?.popViewController(animated:true)
     }
     
     var items = [ChecklistItem]()
@@ -54,6 +60,19 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         items.append(item5)
     }
     
+    // MARK: - Navigation
+    override func prepare(
+      for segue: UIStoryboardSegue,
+      sender: Any?
+    ) {
+      // 1
+      if segue.identifier == "AddItem" {
+        // 2
+        let controller = segue.destination as! AddItemViewController
+        // 3
+        controller.delegate = self
+      }
+    }
     
     // MARK: - Table View Data Source
     override func tableView(
@@ -124,17 +143,6 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     }
 
     //MARK: - Actions
-    // подключим кнопку "Добавить" к действию
-    @IBAction func addItem() {
-        let newRowIndex = items.count // индекс новой строки всегда равен количеству элементов, находящихся в данный момент в массиве
-        // Новый код создает новый `ChecklistItem` объект и добавляет его в модель данных - `items` массив
-        let item = ChecklistItem()
-        item.text = "Я - новая строка!"
-        items.append(item)
-        
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
-    }
+
 }
 
