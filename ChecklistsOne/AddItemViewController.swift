@@ -7,6 +7,15 @@
 
 import UIKit
 
+protocol AddItemViewControllerDelegate: AnyObject {
+  func addItemViewControllerDidCancel(
+    _ controller: AddItemViewController)
+  func addItemViewController(
+    _ controller: AddItemViewController,
+    didFinishAdding item: ChecklistItem
+  )
+}
+
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     
