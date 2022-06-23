@@ -23,11 +23,17 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
     weak var delegate: AddItemViewControllerDelegate?
+    var itemToEdit: ChecklistItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        // меняем заголовок на панели навигации на Edit Item
+        if let item = itemToEdit {
+          title = "Edit Item"
+          textField.text = item.text
+        }
         
     }
     

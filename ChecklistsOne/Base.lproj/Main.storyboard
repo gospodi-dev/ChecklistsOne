@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FuD-0E-Bu9" kind="show" identifier="EditItem" trigger="accessoryAction" id="VJI-a5-iPV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,6 +140,9 @@
             <point key="canvasLocation" x="93.84615384615384" y="20.616113744075829"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VJI-a5-iPV"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
