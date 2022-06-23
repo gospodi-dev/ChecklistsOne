@@ -30,9 +30,9 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         
         navigationItem.largeTitleDisplayMode = .never
         // меняем заголовок на панели навигации на Edit Item
-        if let item = itemToEdit {
+        if let itemToEdit = itemToEdit {
           title = "Edit Item"
-          textField.text = item.text
+          textField.text = itemToEdit.text
         }
         
     }
