@@ -8,12 +8,12 @@
 import UIKit
 
 protocol AddItemViewControllerDelegate: AnyObject {
-  func addItemViewControllerDidCancel(
-    _ controller: AddItemViewController)
-  func addItemViewController(
-    _ controller: AddItemViewController,
-    didFinishAdding item: ChecklistItem
-  )
+    func addItemViewControllerDidCancel(
+        _ controller: AddItemViewController)
+    func addItemViewController(
+        _ controller: AddItemViewController,
+        didFinishAdding item: ChecklistItem
+    )
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
@@ -31,8 +31,9 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         navigationItem.largeTitleDisplayMode = .never
         // меняем заголовок на панели навигации на Edit Item
         if let itemToEdit = itemToEdit {
-          title = "Edit Item"
-          textField.text = itemToEdit.text
+            title = "Edit Item"
+            textField.text = itemToEdit.text
+            doneBarButton.isEnabled = true 
         }
         
     }
@@ -40,14 +41,14 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     // MARK: - Actions
     // добавляем действия при нажатии на кнопки
     @IBAction func cancel() {
-      delegate?.addItemViewControllerDidCancel(self)
+        delegate?.addItemViewControllerDidCancel(self)
     }
-
+    
     @IBAction func done() {
-      let item = ChecklistItem()
-      item.text = textField.text!
-
-      delegate?.addItemViewController(self, didFinishAdding: item)
+        let item = ChecklistItem()
+        item.text = textField.text!
+        
+        delegate?.addItemViewController(self, didFinishAdding: item)
     }
     
     // MARK: - Table View Delegates
@@ -60,8 +61,8 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     }
     // чтобы клавиатура автоматически появлялась при открытии экрана
     override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      textField.becomeFirstResponder()
+        super.viewWillAppear(animated)
+        textField.becomeFirstResponder()
     }
     
     // MARK: - Text Field Delegates
@@ -85,5 +86,5 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         doneBarButton.isEnabled = false
         return true
     }
-
+    
 }
