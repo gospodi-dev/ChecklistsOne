@@ -8,12 +8,16 @@
 import UIKit
 
 protocol AddItemViewControllerDelegate: AnyObject {
-    func addItemViewControllerDidCancel(
-        _ controller: AddItemViewController)
-    func addItemViewController(
-        _ controller: AddItemViewController,
-        didFinishAdding item: ChecklistItem
-    )
+  func addItemViewControllerDidCancel(
+    _ controller: AddItemViewController)
+  func addItemViewController(
+    _ controller: AddItemViewController,
+    didFinishAdding item: ChecklistItem
+  )
+  func addItemViewController(
+    _ controller: AddItemViewController,
+    didFinishEditing item: ChecklistItem
+  )
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
@@ -33,7 +37,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         if let itemToEdit = itemToEdit {
             title = "Edit Item"
             textField.text = itemToEdit.text
-            doneBarButton.isEnabled = true 
+            doneBarButton.isEnabled = true
         }
         
     }
