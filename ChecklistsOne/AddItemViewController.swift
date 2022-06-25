@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddItemViewControllerDelegate: AnyObject {
+protocol ItemDetailViewController: AnyObject {
     func addItemViewControllerDidCancel(
         _ controller: AddItemViewController)
     func addItemViewController(
@@ -26,7 +26,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
-    weak var delegate: AddItemViewControllerDelegate?
+    weak var delegate: ItemDetailViewController?
     var itemToEdit: ChecklistItem?
     
     override func viewDidLoad() {

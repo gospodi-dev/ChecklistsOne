@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
+class ChecklistViewController: UITableViewController, ItemDetailViewController {
     // MARK: - Add Item ViewController Delegates
     func addItemViewControllerDidCancel(
         _ controller: AddItemViewController
