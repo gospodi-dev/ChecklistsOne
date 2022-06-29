@@ -35,6 +35,9 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         let item5 = ChecklistItem()
         item5.text = "Eat ice cream"
         items.append(item5)
+        // где на самом деле находится папка документов вашего приложения
+        print("Documents folder is \(documentsDirectory())")
+        print("Data file path is \(dataFilePath())")
     }
     
     // MARK: - Navigation
