@@ -104,8 +104,24 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         print("Error encoding item array: \(error.localizedDescription)")
       }
     }
-    
-    
+    // Чтение данных из файла
+    func loadChecklistItems() {
+      // 1
+      let path = dataFilePath()
+      // 2
+      if let data = try? Data(contentsOf: path) {
+        // 3
+        let decoder = PropertyListDecoder()
+        do {
+          // 4
+          items = try decoder.decode(
+            [ChecklistItem].self,
+            from: data)
+        } catch {
+          print("Error decoding item array: \(error.localizedDescription)")
+        }
+      }
+    }
     
     // MARK: - Table View Data Source
     override func tableView(
