@@ -92,6 +92,21 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         return documentsDirectory().appendingPathComponent("Checklists.plist")
     }
     
+    // Сохранение данных в файл
+    func saveChecklistItems() {
+      let encoder = PropertyListEncoder()
+      do {
+        let data = try encoder.encode(items)
+        try data.write(
+          to: dataFilePath(),
+          options: Data.WritingOptions.atomic)
+      } catch {
+        print("Error encoding item array: \(error.localizedDescription)")
+      }
+    }
+    
+    
+    
     // MARK: - Table View Data Source
     override func tableView(
         _ tableView: UITableView,
