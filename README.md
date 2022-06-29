@@ -1,5 +1,5 @@
 # ChecklistsOne
-![Запись экрана 2022-06-22 в 13 57 14](https://user-images.githubusercontent.com/35374510/175016744-0cd6b139-d7a7-4494-81b0-039b9386f38a.gif)
+![Запись экрана 2022-06-29 в 20 30 52](https://user-images.githubusercontent.com/35374510/176500022-852b8370-1c9f-484b-a98f-3e1e31e217af.gif)
 
 > Простое приложение **Список дел (Checklists)**
 
