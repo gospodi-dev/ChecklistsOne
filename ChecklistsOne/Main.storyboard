@@ -80,7 +80,7 @@ FuKImg
                             <outlet property="delegate" destination="wVJ-eW-ekk" id="fir-so-pdm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="1vM-aa-cmT">
+                    <navigationItem key="navigationItem" title="Name of the Checklist" id="1vM-aa-cmT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBn-CH-qSF">
                             <connections>
                                 <segue destination="Juh-iE-Z8V" kind="show" identifier="AddItem" id="w56-1w-glW"/>

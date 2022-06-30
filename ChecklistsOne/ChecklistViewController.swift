@@ -12,7 +12,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
         // Загрузите сохраненные данные при запуске приложения
         loadChecklistItems()
     }
