@@ -22,7 +22,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="fPG-8Q-jL2"/>
                     <connections>
-                        <segue destination="wVJ-eW-ekk" kind="show" id="Dd2-Mp-6t1"/>
+                        <segue destination="wVJ-eW-ekk" kind="show" identifier="ShowChecklist" id="Dd2-Mp-6t1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgU-R0-8R4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

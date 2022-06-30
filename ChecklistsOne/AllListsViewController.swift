@@ -13,6 +13,7 @@ class AllListsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Включить большие заголовки
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
@@ -34,5 +35,12 @@ class AllListsViewController: UITableViewController {
         withIdentifier: cellIdentifier, for: indexPath)
       cell.textLabel!.text = "List \(indexPath.row)"
       return cell
+    }
+    
+    override func tableView(
+      _ tableView: UITableView,
+      didSelectRowAt indexPath: IndexPath
+    ) {
+      performSegue(withIdentifier: "ShowChecklist", sender: nil)
     }
 }

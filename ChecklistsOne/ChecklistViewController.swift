@@ -12,6 +12,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Отключите большие заголовки для этого контроллера представления
+        navigationItem.largeTitleDisplayMode = .never
         // Загрузите сохраненные данные при запуске приложения
         loadChecklistItems()
     }
