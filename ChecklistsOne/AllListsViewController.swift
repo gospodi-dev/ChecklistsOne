@@ -10,13 +10,31 @@ import UIKit
 class AllListsViewController: UITableViewController {
     
     let cellIdentifier = "ChecklistCell"
-    var lists = [Checklist]()
+    var lists = [Checklist]() // равносильно Array<Checklist>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Включить большие заголовки
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        // 1
+        var list = Checklist()
+        list.name = "Birthdays"
+        lists.append(list)
+
+        // 2
+        list = Checklist()
+        list.name = "Groceries"
+        lists.append(list)
+
+        list = Checklist()
+        list.name = "Cool Apps"
+        lists.append(list)
+
+        list = Checklist()
+        list.name = "To Do"
+        lists.append(list)
     }
 
     // MARK: - Table view data source
