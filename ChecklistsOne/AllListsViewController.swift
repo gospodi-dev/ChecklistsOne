@@ -31,34 +31,49 @@ class AllListsViewController: UITableViewController {
         lists.append(list)
     }
     
+    
+    // MARK: - Navigation
+    override func prepare(
+      for segue: UIStoryboardSegue,
+      sender: Any?
+    ) {
+      if segue.identifier == "ShowChecklist" {
+        let controller = segue.destination as! ChecklistViewController
+        controller.checklist = sender as? Checklist
+      }
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(
-      _ tableView: UITableView,
-      numberOfRowsInSection section: Int
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
     ) -> Int {
-      return lists.count
+        return lists.count
     }
     
     override func tableView(
-      _ tableView: UITableView,
-      cellForRowAt indexPath: IndexPath
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(
-        withIdentifier: cellIdentifier,
-        for: indexPath)
-      // Update cell information
-      let checklist = lists[indexPath.row]
-      cell.textLabel!.text = checklist.name
-      cell.accessoryType = .detailDisclosureButton
-
-      return cell
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellIdentifier,
+            for: indexPath)
+        // Update cell information
+        let checklist = lists[indexPath.row]
+        cell.textLabel!.text = checklist.name
+        cell.accessoryType = .detailDisclosureButton
+        
+        return cell
     }
     
     override func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        performSegue(withIdentifier: "ShowChecklist", sender: nil)
+        let checklist = lists[indexPath.row]
+        performSegue(
+            withIdentifier: "ShowChecklist",
+            sender: checklist)
     }
 }
