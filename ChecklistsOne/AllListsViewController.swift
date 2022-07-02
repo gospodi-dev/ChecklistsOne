@@ -41,13 +41,18 @@ class AllListsViewController: UITableViewController {
     }
     
     override func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
+      _ tableView: UITableView,
+      cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel!.text = "List \(indexPath.row)"
-        return cell
+      let cell = tableView.dequeueReusableCell(
+        withIdentifier: cellIdentifier,
+        for: indexPath)
+      // Update cell information
+      let checklist = lists[indexPath.row]
+      cell.textLabel!.text = checklist.name
+      cell.accessoryType = .detailDisclosureButton
+
+      return cell
     }
     
     override func tableView(
