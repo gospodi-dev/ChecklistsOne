@@ -8,6 +8,7 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
+    var checklist: Checklist!
     var items = [ChecklistItem]()
     
     override func viewDidLoad() {
@@ -16,6 +17,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         navigationItem.largeTitleDisplayMode = .never
         // Загрузите сохраненные данные при запуске приложения
         loadChecklistItems()
+        // Это изменяет заголовок экрана, который отображается на панели навигации, на имя `Checklist` объекта.
+        title = checklist.name
     }
     
     // MARK: - Navigation
