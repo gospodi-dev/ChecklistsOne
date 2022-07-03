@@ -32,11 +32,16 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // изменяет заголовок экрана, если пользователь редактирует существующий контрольный список, и помещает его имя в текстовое поле.
         if let checklist = checklistToEdit {
             title = "Edit Checklist"
             textField.text = checklist.name
             doneBarButton.isEnabled = true
         }
+    }
+    //метод для всплывающей клавиатуры
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      textField.becomeFirstResponder()
     }
 }
