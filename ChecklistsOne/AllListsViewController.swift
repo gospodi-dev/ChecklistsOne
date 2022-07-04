@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
     
     let cellIdentifier = "ChecklistCell"
     var lists = [Checklist]() // равносильно Array<Checklist>()
