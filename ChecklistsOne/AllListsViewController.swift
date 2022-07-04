@@ -79,6 +79,19 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             withIdentifier: "ShowChecklist",
             sender: checklist)
     }
+    // метод источника данных табличного представления
+    override func tableView(
+      _ tableView: UITableView,
+      commit editingStyle: UITableViewCell.EditingStyle,
+      forRowAt indexPath: IndexPath
+    ) {
+      lists.remove(at: indexPath.row)
+
+      let indexPaths = [indexPath]
+      tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
+    
+    
     // MARK: - List Detail View Controller Delegates
     // методы делегата
     func listDetailViewControllerDidCancel(
