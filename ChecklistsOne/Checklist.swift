@@ -9,7 +9,7 @@ import UIKit
 
 class Checklist: NSObject {
     var name = ""
-    
+    var items = [ChecklistItem]() // пустой массив, который может содержать `ChecklistItem` объекты
     init(name: String) {
         self.name = name
         super.init()
