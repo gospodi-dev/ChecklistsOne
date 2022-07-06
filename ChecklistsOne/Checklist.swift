@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Checklist: NSObject {
+class Checklist: NSObject, Codable {
     var name = ""
     var items = [ChecklistItem]() // пустой массив, который может содержать `ChecklistItem` объекты
     init(name: String) {
