@@ -49,6 +49,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC9850142877621100BED0D8 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCEF9AF9286F505100B75D00 /* Checklist.swift */,
+				CC75C1D727C69C2E00616FAF /* ChecklistItem.swift */,
+				CC9850122877379800BED0D8 /* DataModel.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		CC9850152877624700BED0D8 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC08855B27CD4DAF008C13B4 /* ItemDetailViewController.swift */,
+				CCC0E36027C2C23200A739D8 /* ChecklistViewController.swift */,
+				CC78D9F52872243A0097915C /* ListDetailViewController.swift */,
+				CCEF9AF7286E13F700B75D00 /* AllListsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		CC9850162877627000BED0D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCC0E36527C2C23200A739D8 /* Assets.xcassets */,
+				CC78D9F728722A470097915C /* Main.storyboard */,
+				CCC0E36727C2C23200A739D8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CCC0E35027C2C23200A739D8 = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +99,12 @@
 		CCC0E35B27C2C23200A739D8 /* ChecklistsOne */ = {
 			isa = PBXGroup;
 			children = (
+				CC9850162877627000BED0D8 /* Resources */,
+				CC9850152877624700BED0D8 /* View Controller */,
+				CC9850142877621100BED0D8 /* Data Models */,
 				CCC0E35C27C2C23200A739D8 /* AppDelegate.swift */,
-				CCC0E35E27C2C23200A739D8 /* SceneDelegate.swift */,
-				CCC0E36027C2C23200A739D8 /* ChecklistViewController.swift */,
-				CC75C1D727C69C2E00616FAF /* ChecklistItem.swift */,
-				CC08855B27CD4DAF008C13B4 /* ItemDetailViewController.swift */,
-				CC78D9F728722A470097915C /* Main.storyboard */,
-				CCC0E36727C2C23200A739D8 /* LaunchScreen.storyboard */,
-				CCC0E36527C2C23200A739D8 /* Assets.xcassets */,
 				CCC0E36A27C2C23200A739D8 /* Info.plist */,
-				CCEF9AF7286E13F700B75D00 /* AllListsViewController.swift */,
-				CCEF9AF9286F505100B75D00 /* Checklist.swift */,
-				CC78D9F52872243A0097915C /* ListDetailViewController.swift */,
-				CC9850122877379800BED0D8 /* DataModel.swift */,
+				CCC0E35E27C2C23200A739D8 /* SceneDelegate.swift */,
 			);
 			path = ChecklistsOne;
 			sourceTree = "<group>";

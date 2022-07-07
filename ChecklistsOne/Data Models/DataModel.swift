@@ -80,7 +80,7 @@ class DataModel {
       let firstTime = userDefaults.bool(forKey: "FirstTime")
 
       if firstTime {
-        let checklist = Checklist(name: "List")
+        let checklist = Checklist(name: "Список")
         lists.append(checklist)
 
         indexOfSelectedChecklist = 0
