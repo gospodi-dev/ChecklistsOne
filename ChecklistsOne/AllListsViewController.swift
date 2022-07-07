@@ -17,6 +17,22 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.delegate = self
+        
+        let index = UserDefaults.standard.integer(
+            forKey: "ChecklistIndex")
+        if index != -1 {
+            let checklist = dataModel.lists[index]
+            performSegue(
+                withIdentifier: "ShowChecklist",
+                sender: checklist)
+        }
+    }
+    
     // MARK: - Navigation
     override func prepare(
         for segue: UIStoryboardSegue,
@@ -130,14 +146,14 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     // MARK: - Navigation Controller Delegates
     func navigationController(
-      _ navigationController: UINavigationController,
-      willShow viewController: UIViewController,
-      animated: Bool
+        _ navigationController: UINavigationController,
+        willShow viewController: UIViewController,
+        animated: Bool
     ) {
-      // Was the back button tapped?
-      if viewController === self {
-        UserDefaults.standard.set(-1, forKey: "ChecklistIndex")
-      }
+        // Was the back button tapped?
+        if viewController === self {
+            UserDefaults.standard.set(-1, forKey: "ChecklistIndex")
+        }
     }
 }
 
