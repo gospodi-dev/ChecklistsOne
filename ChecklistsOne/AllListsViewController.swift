@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     let cellIdentifier = "ChecklistCell"
     var dataModel: DataModel!
     
