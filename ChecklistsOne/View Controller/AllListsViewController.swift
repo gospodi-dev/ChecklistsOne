@@ -30,6 +30,11 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
                 sender: checklist)
         }
     }
+    // указывает табличному представлению перезагрузить все его содержимоеы
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     // MARK: - Navigation
     override func prepare(
@@ -60,12 +65,12 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         // Get cell
         let cell: UITableViewCell!
         if let tmp = tableView.dequeueReusableCell(
-          withIdentifier: cellIdentifier) {
-          cell = tmp
+            withIdentifier: cellIdentifier) {
+            cell = tmp
         } else {
-          cell = UITableViewCell(
-            style: .subtitle,
-            reuseIdentifier: cellIdentifier)
+            cell = UITableViewCell(
+                style: .subtitle,
+                reuseIdentifier: cellIdentifier)
         }
         
         let checklist = dataModel.lists[indexPath.row]
