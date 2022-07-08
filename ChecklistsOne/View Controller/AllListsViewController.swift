@@ -30,7 +30,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
                 sender: checklist)
         }
     }
-    // указывает табличному представлению перезагрузить все его содержимоеы
+    // указывает табличному представлению перезагрузить все его содержимое
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()

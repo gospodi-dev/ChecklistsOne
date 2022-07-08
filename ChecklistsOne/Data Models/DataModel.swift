@@ -76,16 +76,22 @@ class DataModel {
     }
     
     func handleFirstTime() {
-      let userDefaults = UserDefaults.standard
-      let firstTime = userDefaults.bool(forKey: "FirstTime")
-
-      if firstTime {
-        let checklist = Checklist(name: "Список")
-        lists.append(checklist)
-
-        indexOfSelectedChecklist = 0
-        userDefaults.set(false, forKey: "FirstTime")
-      }
+        let userDefaults = UserDefaults.standard
+        let firstTime = userDefaults.bool(forKey: "FirstTime")
+        
+        if firstTime {
+            let checklist = Checklist(name: "Список")
+            lists.append(checklist)
+            
+            indexOfSelectedChecklist = 0
+            userDefaults.set(false, forKey: "FirstTime")
+        }
+    }
+    // MARK: - Sorting
+    func sortChecklists() {
+        lists.sort { list1, list2 in
+            return list1.name.localizedStandardCompare(list2.name) == .orderedAscending
+        }
     }
 }
 
