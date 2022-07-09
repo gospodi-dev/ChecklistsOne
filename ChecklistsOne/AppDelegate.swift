@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications // говорит компилятору, что мы собираемся использовать платформу пользовательских уведомлений
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
