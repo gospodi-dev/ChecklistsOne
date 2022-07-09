@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC08855C27CD4DAF008C13B4 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC08855B27CD4DAF008C13B4 /* ItemDetailViewController.swift */; };
 		CC54E5EF287878450017E0B4 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E5EE287878450017E0B4 /* IconPickerViewController.swift */; };
-		CC54E5F22878799E0017E0B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC54E5F02878799E0017E0B4 /* Main.storyboard */; };
+		CC54E5F52879C6A30017E0B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC54E5F32879C6A30017E0B4 /* Main.storyboard */; };
 		CC75C1D827C69C2E00616FAF /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75C1D727C69C2E00616FAF /* ChecklistItem.swift */; };
 		CC78D9F62872243A0097915C /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78D9F52872243A0097915C /* ListDetailViewController.swift */; };
 		CC9850132877379800BED0D8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9850122877379800BED0D8 /* DataModel.swift */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		CC08855B27CD4DAF008C13B4 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		CC54E5EE287878450017E0B4 /* IconPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
-		CC54E5F12878799E0017E0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../ia-materials-editions-10.0/02-checklists/source-code/19-ui-improvements/chapter-19-final/Checklists/Resources/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		CC54E5F42879C6A30017E0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../ia-materials-editions-10.0/02-checklists/source-code/20-local-notifications/chapter-20-starter/Checklists/Resources/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		CC75C1D727C69C2E00616FAF /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		CC78D9F52872243A0097915C /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		CC9850122877379800BED0D8 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -62,10 +62,10 @@
 		CC9850152877624700BED0D8 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC08855B27CD4DAF008C13B4 /* ItemDetailViewController.swift */,
-				CCC0E36027C2C23200A739D8 /* ChecklistViewController.swift */,
-				CC78D9F52872243A0097915C /* ListDetailViewController.swift */,
 				CCEF9AF7286E13F700B75D00 /* AllListsViewController.swift */,
+				CCC0E36027C2C23200A739D8 /* ChecklistViewController.swift */,
+				CC08855B27CD4DAF008C13B4 /* ItemDetailViewController.swift */,
+				CC78D9F52872243A0097915C /* ListDetailViewController.swift */,
 				CC54E5EE287878450017E0B4 /* IconPickerViewController.swift */,
 			);
 			path = "View Controller";
@@ -74,8 +74,8 @@
 		CC9850162877627000BED0D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CC54E5F02878799E0017E0B4 /* Main.storyboard */,
 				CCC0E36527C2C23200A739D8 /* Assets.xcassets */,
+				CC54E5F32879C6A30017E0B4 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC0E36627C2C23200A739D8 /* Assets.xcassets in Resources */,
-				CC54E5F22878799E0017E0B4 /* Main.storyboard in Resources */,
+				CC54E5F52879C6A30017E0B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,10 +195,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC54E5F02878799E0017E0B4 /* Main.storyboard */ = {
+		CC54E5F32879C6A30017E0B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC54E5F12878799E0017E0B4 /* Base */,
+				CC54E5F42879C6A30017E0B4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
