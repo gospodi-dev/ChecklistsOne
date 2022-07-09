@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
           content: content,
           trigger: trigger)
         center.add(request)
+        center.delegate = self
         return true
     }
     
